@@ -1,0 +1,108 @@
+#+TITLE: Web Server
+
+This contains the entry point for our application.
+
+* Dotnet Project Configuration
+:PROPERTIES:
+:header-args:    :tangle "../src/shk-app.fsproj"
+:END:
+
+The ~.fsproj~ file is where the project files are listed. In F#, the
+order in which the files are listed is important. If file B references
+file A, then B must come listed after A.
+
+#+begin_src txt
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>shk_app</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="WeatherForecast.fs" />
+    <Compile Include="Controllers/WeatherForecastController.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
+#+end_src
+
+* App Configuration
+
+** Prod Configuration
+:PROPERTIES:
+:header-args:    :tangle "../appsettings.json"
+:END:
+
+#+begin_src js
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+#+end_src
+
+** Dev Configuration
+:PROPERTIES:
+:header-args:    :tangle "../appsettings.Development.json"
+:END:
+
+#+begin_src js
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  }
+}
+#+end_src
+
+* Entry Point
+:PROPERTIES:
+:header-args:    :tangle "../src/Program.fs"
+:END:
+
+#+begin_src fsharp
+namespace shk_app
+#nowarn "20"
+open System
+open System.Collections.Generic
+open System.IO
+open System.Linq
+open System.Threading.Tasks
+open Microsoft.AspNetCore
+open Microsoft.AspNetCore.Builder
+open Microsoft.AspNetCore.Hosting
+open Microsoft.AspNetCore.HttpsPolicy
+open Microsoft.Extensions.Configuration
+open Microsoft.Extensions.DependencyInjection
+open Microsoft.Extensions.Hosting
+open Microsoft.Extensions.Logging
+
+module Program =
+    let exitCode = 0
+
+    [<EntryPoint>]
+    let main args =
+
+        let builder = WebApplication.CreateBuilder(args)
+
+        builder.Services.AddControllers()
+
+        let app = builder.Build()
+
+        app.UseHttpsRedirection()
+
+        app.UseAuthorization()
+        app.MapControllers()
+
+        app.Run()
+
+        exitCode
+#+end_src

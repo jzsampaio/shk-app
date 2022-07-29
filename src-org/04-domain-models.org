@@ -1,0 +1,16 @@
+#+TITLE: Domain Models
+#+PROPERTY: header-args    :tangle "../src/WeatherForecast.fs"
+
+#+begin_src fsharp
+namespace shk_app
+
+open System
+
+type WeatherForecast =
+    { Date: DateTime
+      TemperatureC: int
+      Summary: string }
+
+    member this.TemperatureF =
+        32.0 + (float this.TemperatureC / 0.5556)
+#+end_src
