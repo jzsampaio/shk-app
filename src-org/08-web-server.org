@@ -1,17 +1,17 @@
 #+TITLE: Web Server
-
 This contains the entry point for our application.
 
-* Dotnet Project Configuration
+* The Web Server
+** Dotnet Project Configuration
 :PROPERTIES:
-:header-args:    :tangle "../src/shk-app.fsproj"
+:header-args:    :tangle "../src/shk-app.fsproj"  :mkdirp yes :comments link
 :END:
 
 The ~.fsproj~ file is where the project files are listed. In F#, the
 order in which the files are listed is important. If file B references
 file A, then B must come listed after A.
 
-#+begin_src txt
+#+begin_src xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
@@ -28,11 +28,11 @@ file A, then B must come listed after A.
 </Project>
 #+end_src
 
-* App Configuration
+** App Configuration
 
-** Prod Configuration
+*** Prod Configuration
 :PROPERTIES:
-:header-args:    :tangle "../appsettings.json"
+:header-args:    :tangle "../appsettings.json"  :mkdirp yes :comments link
 :END:
 
 #+begin_src js
@@ -47,9 +47,9 @@ file A, then B must come listed after A.
 }
 #+end_src
 
-** Dev Configuration
+*** Dev Configuration
 :PROPERTIES:
-:header-args:    :tangle "../appsettings.Development.json"
+:header-args:    :tangle "../appsettings.Development.json"  :mkdirp yes :comments link
 :END:
 
 #+begin_src js
@@ -63,14 +63,15 @@ file A, then B must come listed after A.
 }
 #+end_src
 
-* Entry Point
+** Entry Point
 :PROPERTIES:
-:header-args:    :tangle "../src/Program.fs"
+:header-args:    :tangle "../src/Program.fs" :mkdirp yes :comments link
 :END:
 
 #+begin_src fsharp
 namespace shk_app
 #nowarn "20"
+// foobar
 open System
 open System.Collections.Generic
 open System.IO

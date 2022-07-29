@@ -1,0 +1,5 @@
+#+TITLE: The Stronger and Harder to Kill App
+
+#+INCLUDE: "./04-domain-models.org"
+#+INCLUDE: "./05-domain-commands.org"
+#+INCLUDE: "./08-web-server.org"

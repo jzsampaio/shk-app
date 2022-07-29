@@ -1,5 +1,8 @@
 #+TITLE: Domain Models
-#+PROPERTY: header-args    :tangle "../src/WeatherForecast.fs"
+* Domain Models
+:PROPERTIES:
+:header-args: :tangle "../src/WeatherForecast.fs"  :mkdirp yes :comments link
+:END:
 
 #+begin_src fsharp
 namespace shk_app
