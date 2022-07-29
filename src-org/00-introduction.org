@@ -1,0 +1,64 @@
+* Introduction
+
+This book is an attempt to put together the very best that I know of
+software development. One can see this as my self-proposed graduation
+thesis.
+
+This book is also a software project. By following the steps outlined
+on this book, it is be possible to compile the proposed software
+system from the very same files that consist in this book.
+
+This software project will be built with with a mixture of software
+design practices that include:
+
+- Literate Programming
+- Domain Modeling
+- Event Sourcing
+- Time Relational Theory and Immutable architecture
+
+[[file:03-software-design-document.org][Chapter 3]] details these practices.
+
+** Overview of the Software Product
+
+I want a mobile app to use during my gym time. I want the UX of this
+app to minimize the interactions required for completing common use
+cases. Also, the app should allow me to store videos of my workout
+routines, and do it in a way that allows for easy comparison.
+
+I am a weightlifter myself, and I don't like the amount of time I
+spend clicking through the interface of the app I currently use.
+
+This app is not supposed to hit the market. The reason I picked weigh
+lifting is because I know a lot about this domain, and I think that
+this will allow me to best prototype with domain modeling.
+
+** Motivation
+
+Commercial software projects are frequently built on a rush. A
+consequence of this is that one does not usually get granted adequate
+time to polish software practices, and this is frustrating. A
+passionate experienced programmer accumulates a lot of knowledge over
+the years, and most of this knowledge goes unused.
+
+And by going unused, some skills are never fully developed. Even on
+the advent of spare time for polishing, my skills were rusty, and I
+could not quickly deliver software to the standard that I know is
+possible.
+
+This project was built during my vacation. I am paying from my own
+pocket the effort needed to pull this project. I have 2 calendar
+months to work on this. After this allocated time, I will go back to a
+job, and it might take several years before I replicate similar effort
+(if ever). I better make it count.
+
+** The Author
+
+My name is Juarez Sampaio. I started programming in 2011 as an
+Electrical Engineer major. In 2015 I got my first job as a
+programmer. Up to July 2022 I have had 3 jobs: at Simbiose Ventures,
+at Brick Abode, and at Datarisk.
+
+At my last job I became Head of Technology for about 3 months, which
+basically meant I was a manager. I decided to go back to being a
+senior engineer, and to change companies. I took a 3 months break
+before my next job.

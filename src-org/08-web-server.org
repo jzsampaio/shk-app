@@ -1,4 +1,3 @@
-#+TITLE: Web Server
 This contains the entry point for our application.
 
 * The Web Server

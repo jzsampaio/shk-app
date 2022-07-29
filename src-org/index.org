@@ -1,5 +1,11 @@
 #+TITLE: The Stronger and Harder to Kill App
 
+#+INCLUDE: "./00-introduction.org"
+#+INCLUDE: "./01-vision-and-scope.org"
+#+INCLUDE: "./02-software-requirement-specification.org"
+#+INCLUDE: "./03-software-design-document.org"
 #+INCLUDE: "./04-domain-models.org"
 #+INCLUDE: "./05-domain-commands.org"
+#+INCLUDE: "./06-domain-queries.org"
+#+INCLUDE: "./07-storage.org"
 #+INCLUDE: "./08-web-server.org"

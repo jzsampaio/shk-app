@@ -1,4 +1,3 @@
-#+TITLE: Domain Models
 * Domain Models
 :PROPERTIES:
 :header-args: :tangle "../src/WeatherForecast.fs"  :mkdirp yes :comments link

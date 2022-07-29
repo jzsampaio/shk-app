@@ -1,0 +1,179 @@
+* Vision and Scope
+
+This document was adapted from the ~Software Requirements~ book.
+
+The product to be built will be referred to as SHK (Stronger and
+Harder to Kill) App.
+
+** Business requirements
+
+SHK should allow the user to keep track of his progress on strength
+training, while minimizing the amount of interaction with the mobile
+device.
+
+*** Background
+
+Strength training is mostly about consistency following a workout
+program designed to push the current strength boundaries of the
+lifter. As lifters get stronger, more weight should be added to the
+bar, and eventually new workout algorithms are necessary.
+
+Keeping track of these workouts usually requires pen and papers. App
+exist that will help the user. However, the apps that JZ tried all
+require significant amount of interaction to get the job done. Also,
+they don't link workout to videos. There exists tools that analyze
+workout videos, but these are separate apps.
+
+*** TODO Opportunity
+
+   Describes the business opportunity that exists and the market in
+   which the product will be competing. This section could include a
+   comparative evaluation of existing products, indicating why the
+   proposed product is attractive and the advantages it
+   provides. Describe the problems that cannot currently be solved
+   without the envisioned solution. Show how it aligns with market
+   trends, technology evolution, or corporate strategic
+   directions. List any other technologies, processes, or resources
+   required to provide a complete customer solution.
+
+*** Objectives
+
+   | Financial                                 | Non financial                    |
+   |-------------------------------------------+----------------------------------|
+   | Reach 10 paid users on Google Store       | Get positive feedback from peers |
+   | Make 100 USD on adds for the free version | Get a friend to use the app      |
+   | Present this app on future job interviews |                                  |
+
+*** Success metrics
+
+As this is a portfolio project, I won't evaluate it in term of market
+success, instead, I will run a survey through trusted fellow
+engineers.
+
+
+**** Survey
+
+Please fill the table below. Indicate with and ~X~ how much you agree
+to the statement on each row.
+
+| Question                                                                     | Totally disagree | Disagree | Neutral | Agree | Completely Agree |
+|------------------------------------------------------------------------------+------------------+----------+---------+-------+------------------|
+| SHK ships with the best documentation I have seen in a software project      |                  |          |         |       |                  |
+| I am not aware of security flaws on the design of SHK                        |                  |          |         |       |                  |
+| I think SHK is ready to scale to a thousand concurrent users                 |                  |          |         |       |                  |
+| I would like to apply the processes used to construct SHK on my own projects |                  |          |         |       |                  |
+| I think this project was built with world class quality                      |                  |          |         |       |                  |
+
+
+**** Open Ended Questions
+
+- How would you improve this software system?
+- What of this project caught your attention?
+
+*** Vision statement
+
+For weightlifters who want an efficient and thorough way to log their
+workouts, the ~Stronger and Harder to Kill (SHK) App~ is a workout
+logging system that minimizes contact with the mobile device while at
+a workout. Unlike competitors, our product was built by a weightlifter
+who really wants to avoid touching his cellphone while on workout.
+
+*** Business risks
+
+
+The biggest risk on this project is I not finishing it. This is a non
+paid and self-proposed challenge. If the future is to repeat the past,
+there is a chance I will want to give up after 10 days on this
+project. By not completing this project, I will have wasted a ton of
+time. I must take this at least to a point where I can present the
+book on a job interview.
+
+*** Assumptions and dependencies
+
+- Assumptions
+    * It should be easy to get an F# project running on Android
+    * It should be easy to monetize my android app
+- Dependencies
+    * F# and Android ecosystem
+
+** Scope and limitations
+
+  States both what the solution being developed is and what it is not.
+
+*** Features
+**** Scope of initial release
+
+- Lifter should be able to log his workout informing exercises done,
+  as well as number of sets and reps
+- Lifter should be able to attach video recordings of each set
+- App should support multiple users
+- App should support 10 concurrent users
+- The user data should be accessible on mobile android device and on
+  the web browser
+    * Google chrome is enough
+
+**** Scope of subsequent releases
+
+Future releases might include:
+
+- Video analyzes of the exercises
+- App usable from a smart watch
+- Capacity to play music
+- Smart way for playing audiobooks/podcasts during recovery time
+- Timer for HIIT workouts
+- App should support a 100 concurrent users
+
+**** Limitations and exclusions
+
+Not necessarily this app will:
+
+- Run on app devices
+
+** Context
+
+This section presents profiles of major stakeholder categories,
+management’s priorities for the project, and a summary of some
+factors to consider when planning deployment of the solution.
+
+*** Stakeholders profiles
+
+- Developer :: This is JZ, the sponsor of this project. He would like
+  to know that the stuff that he preaches is actually good when put to
+  practice. He would also like to become faster at putting this stuff
+  to practice, so more people are convinced it is worth pursuing my
+  path, and so the software industry becomes a more interesting place
+  to live.
+- Project Reviewer (Tecnical) :: These are the fellow engineers I will
+  invite to evaluate my project. Candidates: Filipe Correia, Daniel,
+  Bellani, Alesson, Wesley, Todd, Ataias, Lemos, Magueta, Renan, and
+  Thales. As friends, I think they would like to contribute to my
+  progress. As engineer, they would like to learn that such level of
+  quality as the one proposed by this project is possible.
+- App Reviewer (Lifter) :: These are lifters that I will invite to try
+  my app. Candidates: Ataias, Luana, and "Senhor Tanquinho".
+- Weightlifter :: This is the primary user of the system. He goes to
+  the gym, he wants to get stronger, and he does not want to get hurt.
+    * Brazilian Lifter :: This guys does not pay for apps. Will most
+      likely use the free version
+    * Gringo Lifter :: Has money and pays for apps.
+
+*** Priorities
+
+   To enable effective decision making, the stakeholders must agree on the
+   project's priorities. One way to approach this is to consider the five
+   dimensions of features, quality, schedule, cost, and staff.
+
+   | Dimension | Priority (higher -> less flexibility) |
+   |-----------+---------------------------------------|
+   | Feature   |                                     1 |
+   | Quality   |                                     5 |
+   | Schedule  |                                     8 |
+   | Cost      |                                     3 |
+   | Staff     |                                    20 |
+
+*** Deployment considerations
+
+This product is a brand new solution. It should run on modern Android
+versions (to be defined). The back-end should be salable to a thousand
+concurrent users, though, since the budget is on me, the production
+version should run on very cheap cloud vms.

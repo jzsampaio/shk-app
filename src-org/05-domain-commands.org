@@ -1,4 +1,3 @@
-#+TITLE: Commands
 * Commands
 ** Weather Forecast Controller
 :PROPERTIES:
