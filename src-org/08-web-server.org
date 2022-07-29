@@ -71,7 +71,6 @@ file A, then B must come listed after A.
 #+begin_src fsharp
 namespace shk_app
 #nowarn "20"
-// foobar
 open System
 open System.Collections.Generic
 open System.IO
